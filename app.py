@@ -22,8 +22,10 @@ def login():
         # Demo only:
         # We intentionally don't receive or store a password.
         username = request.form.get("username", "").strip()
+        demopassword = request.form.get("demo.password", "").strip()
 
         print(f"[DEMO] Username submitted: {username}")
+        print(f"[DEMO] Username submitted: {password}")
 
         if not valid_redirect(REDIRECT_URL):
             return "Invalid redirect URL", 400
